@@ -7,7 +7,8 @@ const scoreResult = document.getElementById("scoreResult");
 let winMsg = "<h2>You wins!</h2>" + "<span>Your Score: </span>";
 let loseMsg = "<h2>Computer Wins</h2>" + "<span>Computer Score: </span>";
 let equalMsg = "<h2>Nobody wins</h2>";
-let incrementScore = 0;
+let incrementUser = 0;
+let incrementComp = 0;
 
 startGame.addEventListener('click' , function() {
     
@@ -25,16 +26,38 @@ startGame.addEventListener('click' , function() {
     }
     else {
         userNumb = 0;
+        randNumb = 0;
         result.innerHTML = equalMsg;
     }
     
-    scoreResult.innerHTML = 
-    `
-    <h3>
-    ${userName} score is: ${incrementScore += userNumb}
-    </h3>
-    `
 
+
+    if((incrementUser += userNumb) > (incrementComp += randNumb)) {
+
+        scoreResult.innerHTML = 
+        `
+        <h3 class="winner">
+        ${userName} score is: ${incrementUser += userNumb}
+        </h3>
+        <h3 class="loser">
+        Computer score is: ${incrementComp += randNumb}
+        </h3>
+        `
+
+    }
+
+    else  {
+        scoreResult.innerHTML = 
+        `
+        <h3 class="loser">
+        ${userName} score is: ${incrementUser += userNumb}
+        </h3>
+        <h3 class="winner">
+        Computer score is: ${incrementComp += randNumb}
+        </h3>
+        `
+    }
+     
 });
 
 

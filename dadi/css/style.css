@@ -31,3 +31,11 @@ button {
     border: 5px solid red;
     border-radius: 15px;
 }
+
+.winner {
+    color: green;
+}
+
+.loser {
+    color: red;
+}
