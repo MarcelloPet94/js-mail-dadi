@@ -1,4 +1,4 @@
-const checkMail = document.getElementById("checkMail").value;
+let checkMail = "";
 const verifyMail = document.getElementById("verifyMail");
 const outPut = document.getElementById("outPut");
 
@@ -15,6 +15,7 @@ let controllo = false;
 verifyMail.addEventListener('click', function() {
     for(let i = 0; i < dataMail.length; i++) {
         
+        let checkMail = document.getElementById("checkMail").value;
         console.log(dataMail[i]);
         
         if(checkMail === dataMail[i]) {
@@ -22,10 +23,12 @@ verifyMail.addEventListener('click', function() {
         }
         
     }
+
     if(controllo) {
         outPut.innerHTML = "E-mail esistente, puoi effettuare l'accesso";
     }
     else {
         outPut.innerHTML = "Il tuo account non esiste";
+        let checkMail = "";
     }
 });    
