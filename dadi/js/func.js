@@ -1,4 +1,5 @@
-const userName = prompt("Il tuo nome");
+let userName = prompt("Il tuo nome");
+if(userName == "") {userName = "Nessuno";}
 
 const startGame = document.getElementById("startGame");
 const result = document.getElementById("result");
