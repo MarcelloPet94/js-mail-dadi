@@ -1,10 +1,9 @@
 const startGame = document.getElementById("startGame");
 const result = document.getElementById("result");
 
-let winMsg = "<h2>Computer Wins</h2>";
-let loseMsg = "<h2>You wins!</h2>";
-let equalMsg = "<h2>Nobody wins</h2>";
-
+let winMsg = "<h2>You wins!</h2>" + "<span>Your Score: </span>";
+let loseMsg = "<h2>Computer Wins</h2>" + "<span>Computer Score: </span>";
+let equalMsg = "<h2>Nobody wins</h2>" + "<span>Evrybody score: </span>";
 
 startGame.addEventListener('click' , function() {
     
@@ -14,9 +13,16 @@ startGame.addEventListener('click' , function() {
     console.log("Computer Number is: " + randNumb);
     console.log("Your Number is: " + userNumb);
 
-    if(randNumb > userNumb) {result.innerHTML = winMsg;}
-    else if(randNumb < userNumb) {result.innerHTML = loseMsg;}
-    else {result.innerHTML = equalMsg;}
+    if(randNumb > userNumb) {
+        result.innerHTML = winMsg + randNumb;
+        
+    }
+    else if(randNumb < userNumb) {
+        result.innerHTML = loseMsg + userNumb;
+    }
+    else {
+        result.innerHTML = equalMsg + userNumb;
+    }
 
 });
 
