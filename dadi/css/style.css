@@ -1,0 +1,28 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+#gameArea {
+    text-align: center;
+    margin: 20% auto;
+    width: 80%;
+}
+
+h2 {
+    font-size: 48px;
+    padding: 24px;
+}
+
+#result {
+    height: 200px;
+}
+
+button {
+    padding: 20px;
+    background-color: #010101;
+    color: #fff;
+    border: 5px solid red;
+    border-radius: 15px;
+}
