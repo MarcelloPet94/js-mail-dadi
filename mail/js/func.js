@@ -1,3 +1,6 @@
+const checkMail = document.getElementById("checkMail").value;
+const verifyMail = document.getElementById("verifyMail");
+const outPut = document.getElementById("outPut");
 
 const dataMail = [
     'a.b@bmail.com',
@@ -7,18 +10,22 @@ const dataMail = [
     'i.l@bmail.com',
 ];
 
-const checkYourMail = prompt("Inserisci la tua e-mail");
 let controllo = false;
 
-for(let i = 0; i < dataMail.length; i++) {
-    if(checkYourMail === dataMail[i]) {
-        controllo = true;
+verifyMail.addEventListener('click', function() {
+    for(let i = 0; i < dataMail.length; i++) {
+        
+        console.log(dataMail[i]);
+        
+        if(checkMail === dataMail[i]) {
+            controllo = true;
+        }
+        
     }
-}
-
-if(controllo) {
-    document.write("E-mail esistente, puoi effettuare l'accesso");
-}
-else {
-    document.write("Il tuo account non esiste");
-}
+    if(controllo) {
+        outPut.innerHTML = "E-mail esistente, puoi effettuare l'accesso";
+    }
+    else {
+        outPut.innerHTML = "Il tuo account non esiste";
+    }
+});    
