@@ -28,7 +28,12 @@ startGame.addEventListener('click' , function() {
         result.innerHTML = equalMsg;
     }
     
-    scoreResult.innerHTML = userName + " score is: " + (incrementScore += userNumb);
+    scoreResult.innerHTML = 
+    `
+    <h3>
+    ${userName} score is: ${incrementScore += userNumb}
+    </h3>
+    `
 
 });
 
