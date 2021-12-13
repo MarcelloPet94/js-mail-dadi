@@ -19,6 +19,10 @@ h2 {
     height: 200px;
 }
 
+#scoreResult {
+    padding: 24px;
+}
+
 button {
     padding: 20px;
     background-color: #010101;
